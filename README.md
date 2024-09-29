@@ -1,6 +1,6 @@
 # bitcoin_spark
 
-This program is meant to stream data about the bitcoin prices (live data) using an API, then data is persisted in HBase and pushed to a Kafka server that has a console consumer to show the bitcoin price every 20 seconds.
+This program is meant to stream data about the bitcoin prices (live data) using an API, then data is persisted in HBase and pushed to a Kafka server that has a console consumer to show the bitcoin price periodically.
 
 Following are the main components of the project:
 
