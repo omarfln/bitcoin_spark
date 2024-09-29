@@ -16,3 +16,6 @@ The main application that manages the streaming process. It uses a Spark Streami
 Kafka producer
 
 Sends the price data to the topic, while a separate thread consumes and prints it. Each price is also stored in HBase with a timestamp, under the column family "cf" and the qualifier "price".
+
+
+Demo recording link: https://drive.google.com/file/d/10W013wYA7DC11NgR5W1kPxU3-X6BacRR/view?usp=sharing
