@@ -1,0 +1,32 @@
+//Hbase list tables
+
+hbase(main):001:0> list
+TABLE                                                                           
+bitcoin_prices                                                                  
+1 row(s) in 1.4150 seconds
+
+=> ["bitcoin_prices"]
+hbase(main):002:0> 
+
+
+//bitcoin_prices content
+hbase(main):004:0> scan 'bitcoin_prices'
+ROW                   COLUMN+CELL                                               
+ \x00\x00\x01\x928\xD column=cf:price, timestamp=1727531004908, value=65502.0   
+ F-l                                                                            
+ \x00\x00\x01\x928\xD column=cf:price, timestamp=1727531015911, value=65543.0   
+ F^\xB4                                                                         
+ \x00\x00\x01\x928\xD column=cf:price, timestamp=1727531026304, value=65543.0   
+ F\x87T                                                                         
+ \x00\x00\x01\x928\xD column=cf:price, timestamp=1727531036736, value=65543.0   
+ F\xAF\xD3                                                                      
+ \x00\x00\x01\x928\xD column=cf:price, timestamp=1727531047060, value=65543.0   
+ F\xD8u                                                                         
+5 row(s) in 1.4500 seconds
+
+hbase(main):005:0> 
+
+
+//Sample real time input (API response)
+API Response: {"bitcoin":{"usd":65502}}
+

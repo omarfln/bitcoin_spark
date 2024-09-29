@@ -1,0 +1,27 @@
+//Start hbase master
+sudo service hbase-master status
+
+//Start zookeeper service
+sudo service zookeeper-service start
+
+//Start hbase region server service
+sudo service hbase-regionserver start
+
+
+//Start hbase shell
+hbase shell
+
+//Show hbase tables
+list
+
+//get table values
+scan 'bitcoin_prices'
+
+//start Kafka server 
+kafka/kafka_2.13-3.5.1/bin/kafka-server-start.sh config/server.properties
+
+//Start Kafka console consumer
+kafka/kafka_2.13-3.5.1/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic bitcoin-price-topic --from-beginning
+
+//Start spark-submit (note in my case some dependency was corrupted, but working fine when running from eclipse, tried to remove all dependences and try again but didn't solve the issue. However, everything work as expected with eclipse)
+spark-submit --class cs523.SparkBCHBK.BitcoinStreamingApp /home/cloudera/workspace/SparkBCHBK/target/SparkBCHBK-0.0.1-SNAPSHOT.jar
